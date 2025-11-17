@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CT AI Interview System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Professional Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">CT</div>
+                    <div class="header-text">
+                        <h1 class="company-name">CT Interview System</h1>
+                        <p class="header-subtitle">AI-Powered Candidate Screening</p>
+                    </div>
+                </div>
+                <div id="status" class="status-badge">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Interview Interface -->
+        <main id="main-content">
+            <!-- Conversation Panel -->
+            <section id="chat-section">
+                <div class="section-header">
+                    <h2 class="section-title">Interview Conversation</h2>
+                    <span class="live-indicator">● LIVE</span>
+                </div>
+                <div id="chat-container"></div>
+            </section>
+
+            <!-- Video Panel -->
+            <section id="camera-section">
+                <div class="section-header">
+                    <h2 class="section-title">Candidate Video</h2>
+                    <div id="camera-status" class="camera-badge">
+                        <span class="camera-icon">📹</span>
+                        <span>Initializing...</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <video id="camera-feed" autoplay playsinline muted></video>
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="video-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 7h-4V5a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                <circle cx="12" cy="13" r="3"/>
+                            </svg>
+                            <p>Camera Initializing</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Control Panel -->
+        <div id="controls">
+            <button id="start" class="btn btn-primary">
+                <span class="btn-icon">▶</span>
+                Start Interview
+            </button>
+            <button id="stop" class="btn btn-secondary" disabled>
+                <span class="btn-icon">■</span>
+                End Interview
+            </button>
+        </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

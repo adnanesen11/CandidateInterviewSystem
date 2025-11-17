@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(powershell -Command \"Write-Host $env:APPDATA\")",
+      "mcp__aws_documentation_mcp__search_documentation",
+      "mcp__aws_documentation_mcp__read_documentation",
+      "Bash(dir /s /b *.mp3 2)",
+      "Bash(nul)",
+      "Bash(if not exist \"public\\input-audio\" mkdir \"public\\input-audio\")",
+      "Bash(ffmpeg:*)",
+      "WebSearch",
+      "Bash(npm run build)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

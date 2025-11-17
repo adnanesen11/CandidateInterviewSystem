@@ -1,0 +1,40 @@
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build output
+out/
+
+# Logs
+logs/
+*.log
+
+# Node modules (if applicable for TypeScript project)
+node_modules/
+
+# Build artifacts
+dist/
+
+output/*
+
+# Environment variables (contains sensitive credentials)
+.env
+.env.local
+.env.*.local
+
+# AWS example folders (reference only, not part of main project)
+codeexamples/
+aws-resume-convo/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Audio files (can be large)
+*.wav
+*.mp3
+*.raw
+!input-audio-example/*.raw
